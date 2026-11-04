@@ -3,7 +3,7 @@
 public record StockDto
     (
     int Id,
-    string Type,
+    string Article,
     string Name,
     decimal Price,
     int Quantity,

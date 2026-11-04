@@ -1,7 +1,7 @@
 ﻿namespace CaffeStockAPI.Dtos;
 
 public record UpdateStockDto(
-	string Type,
+	string Article,
 	string Name,
 	decimal Price,
 	int Quantity,

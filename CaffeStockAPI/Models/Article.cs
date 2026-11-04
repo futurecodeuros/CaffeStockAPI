@@ -1,6 +1,6 @@
 ﻿namespace CaffeStockAPI.Models;
 
-public class Type
+public class Article
 {
     public int Id { get; set; }
 
