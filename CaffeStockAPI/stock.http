@@ -1,16 +1,26 @@
-GET http://localhost:5081/caffestock
+GET http://localhost:5081/api/stock
 
 ###
 
+GET http://localhost:5081/api/article
 
-POST http://localhost:5081/caffestock
+###
+
+###
+POST http://localhost:5081/api/stock/
 Content-Type: application/json
 
+{
+  "Name": "Barcaffe Espresso Flora 1kg",
+  "ArticleId": 1,
+  "Price": 45.99,
+  "Quantity": 10
+}
 ### 
 
-PUT http://localhost:5081/caffestock
+PUT http://localhost:5081/api/stock
 
 ### 
 
-DELETE http://localhost:5081/caffestock
+DELETE http://localhost:5081/api/stock/2
 

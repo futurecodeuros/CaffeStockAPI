@@ -1,3 +1,12 @@
-﻿namespace CaffeStockAPI.Dtos;
+﻿using System.ComponentModel.DataAnnotations;
 
-public record ArticleDto(int ID, string Name);
+namespace CaffeStockAPI.Dtos;
+
+public record ArticleDto(
+    [Required][StringLength(50)] string Name
+);
+
+public record ArticleSummaryDto(
+    int Id,
+    string Name
+);

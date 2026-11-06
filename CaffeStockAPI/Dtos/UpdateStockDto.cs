@@ -1,9 +1,10 @@
-﻿namespace CaffeStockAPI.Dtos;
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace CaffeStockAPI.Dtos;
 
 public record UpdateStockDto(
-	string Article,
-	string Name,
-	decimal Price,
-	int Quantity,
-	decimal TotalPrice
+    [Required][StringLength(100)] string Name,
+    [Range(1, 1000)] int ArticleId,
+    [Range(0.01, 10000)] decimal Price,
+    [Range(1, 10000)] int Quantity
 );

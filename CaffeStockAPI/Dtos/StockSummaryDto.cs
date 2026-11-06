@@ -2,9 +2,9 @@
 
 public record StockSummaryDto(
     int Id,
-    string Article,
     string Name,
+    string Article,
     decimal Price,
     int Quantity,
     decimal TotalPrice
-    );
+);

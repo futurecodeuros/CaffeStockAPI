@@ -1,11 +1,10 @@
-﻿namespace CaffeStockAPI.Dtos;
+namespace CaffeStockAPI.Dtos;
 
-public record StockDto
-    (
+public record StockDetailsDto(
     int Id,
-    string Article,
     string Name,
+    int ArticleId,
     decimal Price,
     int Quantity,
     decimal TotalPrice
-    );
+);
