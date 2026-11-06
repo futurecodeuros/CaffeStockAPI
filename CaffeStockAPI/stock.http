@@ -11,14 +11,25 @@ POST http://localhost:5081/api/stock/
 Content-Type: application/json
 
 {
-  "Name": "Barcaffe Espresso Flora 1kg",
+  "Name": "Colombian Supremo 1kg",
   "ArticleId": 1,
-  "Price": 45.99,
-  "Quantity": 10
+  "Price": 35.00,
+  "Quantity": 15
 }
+
 ### 
 
 PUT http://localhost:5081/api/stock
+Content-Type:application/json
+
+{
+    "id": 1,
+    "name": "Barcaffe Espresso Flora 1kg",
+    "article": "Coffee Beans",
+    "price": 45.99,
+    "quantity": 10,
+    "totalPrice": 459.9
+}
 
 ### 
 
