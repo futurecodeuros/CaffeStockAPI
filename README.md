@@ -1,12 +1,10 @@
 # CaffeStock API
 
-CaffeStock is a .NET 10 backend for tracking café inventory. A stock entry records a product name, its article type (for example, Coffee Beans), the unit price and the quantity on hand. The API calculates the entry’s total value as `price × quantity` whenever the entry is created or updated.
-
-Built with ASP.NET Core Minimal APIs, Entity Framework Core and SQLite.
+I work behind a bar, and counting stock is part of my job. I built CaffeStock to keep track of what’s on the shelf, how much is left and what it’s worth.
 
 ## Requirements
 
-Install the .NET 10 SDK. The project uses Entity Framework Core 10 with the SQLite provider. The SDK restores these NuGet packages automatically on the first run. SQLite uses a local database file, so you can run the API without installing Microsoft SQL Server.
+Install the .NET 10 SDK. The API uses ASP.NET Core Minimal APIs and Entity Framework Core with SQLite. The first run restores the packages automatically. There’s no separate database server to set up.
 
 ## Run locally
 
@@ -25,9 +23,9 @@ The application applies database migrations on startup and stores inventory in `
 | Stock entries | `GET /api/stock` · `POST /api/stock` | `GET`, `PUT`, `DELETE` at `/api/stock/{id}` |
 | Article types | `GET /api/article` · `POST /api/article` | `GET`, `PUT`, `DELETE` at `/api/article/{id}` |
 
-## Example: update the quantity after a stock count
+## Updating a stock count
 
-Suppose stock entry 7 represents bags of espresso beans. Read `GET /api/stock/7` first to get its current name, article type and unit price. If the count changes to eight bags, send the complete update below, substituting IDs and values from your own database.
+Say you count eight bags of espresso beans at the end of a shift. Use the IDs from your own database when trying this request.
 
 ```http
 PUT http://localhost:5081/api/stock/7
@@ -41,4 +39,4 @@ Content-Type: application/json
 }
 ```
 
-The ID in the URL selects the stock entry. Keep its existing `articleId` to retain the type, or choose another ID from `GET /api/article` to change it. A successful update returns `204 No Content`. Read the entry again to see the new quantity and the recalculated `totalPrice` of 280.
+The ID in the URL picks the stock entry. Keep its current `articleId` when updating the count, or use a different one to change the type.
