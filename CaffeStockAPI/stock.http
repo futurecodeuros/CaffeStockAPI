@@ -11,27 +11,25 @@ POST http://localhost:5081/api/stock/
 Content-Type: application/json
 
 {
-  "Name": "Colombian Supremo 1kg",
+ "Name": "Ethiopian Yirgacheffe Beans 1kg",
   "ArticleId": 1,
-  "Price": 35.00,
-  "Quantity": 15
+  "Price": 18.99,
+  "Quantity": 25
 }
 
 ### 
 
-PUT http://localhost:5081/api/stock
+PUT http://localhost:5081/api/stock/1
 Content-Type:application/json
 
 {
-    "id": 1,
-    "name": "Barcaffe Espresso Flora 1kg",
-    "article": "Coffee Beans",
-    "price": 45.99,
-    "quantity": 10,
-    "totalPrice": 459.9
+  "Name": "Italian Espresso Blend 500g",
+  "ArticleId": 1,
+  "Price": 12.50,
+  "Quantity": 50
 }
 
 ### 
 
-DELETE http://localhost:5081/api/stock/2
+DELETE http://localhost:5081/api/stock/4
 
