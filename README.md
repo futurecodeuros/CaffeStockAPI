@@ -4,9 +4,11 @@ CaffeStock is a .NET 10 backend for tracking café inventory. A stock entry reco
 
 Built with ASP.NET Core Minimal APIs, Entity Framework Core and SQLite.
 
-## Run locally
+## Requirements
 
-Install the .NET 10 SDK, then run:
+Install the .NET 10 SDK. The project uses Entity Framework Core 10 with the SQLite provider. The SDK restores these NuGet packages automatically on the first run. SQLite uses a local database file, so you can run the API without installing Microsoft SQL Server.
+
+## Run locally
 
 ```sh
 git clone https://github.com/futurecodeuros/CaffeStockAPI.git
